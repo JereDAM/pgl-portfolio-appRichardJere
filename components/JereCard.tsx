@@ -59,7 +59,6 @@ const styles = StyleSheet.create({
     },
     bodyText: {
       color: 'white',
-      fontFamily:'Times New Roman',
       fontWeight: '700',
       paddingLeft:30,
       paddingRight:30,

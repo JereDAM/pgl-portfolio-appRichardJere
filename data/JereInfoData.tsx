@@ -13,11 +13,7 @@ const JereInfoData = () => {
         <Text style={styles.likedInfo}>Tu mama</Text>
         <Text style={styles.likedInfo}>Tu mama</Text>
         <Text style={styles.likedInfo}>Tu mama</Text>
-        <Text style={styles.likedInfo}>Tu mama</Text>
-        <Text style={styles.likedInfo}>Tu mama</Text>
-        <Text style={styles.likedInfo}>Tu mama</Text>
-        <Text style={styles.likedInfo}>Tu mama</Text>
-        <Text style={styles.likedInfo}>Tu mama</Text>
+
       </View>
     </View>
   );
