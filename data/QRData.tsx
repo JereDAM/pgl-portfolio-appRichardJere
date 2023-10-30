@@ -4,14 +4,15 @@ import QRCode from "react-native-qrcode-svg";
 import Ionicons from '@expo/vector-icons/Ionicons';
 
 
-const QRData = ({setisCheckIcon}) => {
-  
+const QRData = (props :{setIsCheckIcon : Function}) => {
+
+  const {setIsCheckIcon} = props
 
   return (
     <View style={styles.bodyStyles}>
       <View style={styles.centerQRCode}>
-        <QRCode value="https://github.com/JereDAM"/>
-        <Ionicons name="arrow-undo-outline" size={80} onPress={() => setisCheckIcon(true)}/>
+        <QRCode value="https://github.com/JereDAM/pgl-portfolio-appRichardJere.git"/>
+        <Ionicons name="arrow-back-outline" size={50} onPress={() => setIsCheckIcon(true)}/>
       </View>
     </View>
   );
