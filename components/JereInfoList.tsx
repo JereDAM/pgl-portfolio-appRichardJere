@@ -21,7 +21,6 @@ const JereInfoList = () => {
       {isCheckIcon ? (
         <Ionicons name="logo-github" size={80} onPress={onClickIcon}></Ionicons>
       ) : <QRData setisCheckIcon={setisCheckIcon}/>}
-
       </View>
     </View>
   );
@@ -47,6 +46,9 @@ const styles = StyleSheet.create({
   icons: {
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 9
+    padding: 4
+  },
+  QRdatas:{
+    marginTop: -10
   }
 });
