@@ -7,10 +7,10 @@ const Header = ({ setDisplayMyQR }) => {
       <Text style={styles.title}>My Portfolio App</Text>
       <View style={styles.tabGroup}>
         <Pressable onPress={() => setDisplayMyQR(true)}>
-          <Text style={styles.textFormat}>MI INFO</Text>
+          <Text style={styles.textFormat}>RICARDO</Text>
         </Pressable>
         <Pressable onPress={() => setDisplayMyQR(false)}>
-          <Text style={styles.textFormat}>MI REPO</Text>
+          <Text style={styles.textFormat}>JEREMY</Text>
         </Pressable>
       </View>
     </View>
@@ -26,7 +26,8 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   title: {
-    backgroundColor: "gray",
+    color: 'white',
+    backgroundColor: "#039E75",
     textAlign: "center",
     fontWeight: "bold",
     textAlignVertical: "center",
@@ -34,7 +35,7 @@ const styles = StyleSheet.create({
   },
   tabGroup: {
     flexDirection: "row",
-    backgroundColor: "darkgray",
+    backgroundColor: "#027859",
     justifyContent: "space-around",
     alignItems: "center",
     height: "50%",
