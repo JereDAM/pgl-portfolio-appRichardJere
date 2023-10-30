@@ -1,11 +1,30 @@
 import { StyleSheet, Text, View, Pressable } from "react-native";
 import React from "react";
+import Ionicons from "@expo/vector-icons/Ionicons";
+import appColors from "../assets/styles/appColors";
 
-const Header = ({ setDisplayMyQR }) => {
+const Header = ({
+  setDisplayMyQR,
+  isCheckIcon,
+  onClickIcon,
+  onClickDarkIcon,
+}) => {
+  const titleBackgroundColor = isCheckIcon ? appColors.headerColor : "black";
+  const tabBackgroundColor = isCheckIcon ? appColors.tabgroupColor : "#1f1f1e";
+
   return (
     <View style={styles.topContainer}>
-      <Text style={styles.title}>My Portfolio App</Text>
-      <View style={styles.tabGroup}>
+      <Text style={[styles.title, { backgroundColor: titleBackgroundColor }]}>
+        My Portfolio App |
+        <Ionicons
+          name={isCheckIcon ? "moon-outline" : "sunny-outline"}
+          size={25}
+          onPress={isCheckIcon ? onClickIcon : onClickDarkIcon}
+        ></Ionicons>
+        |
+      </Text>
+
+      <View style={[styles.tabGroup, { backgroundColor: tabBackgroundColor }]}>
         <Pressable onPress={() => setDisplayMyQR(true)}>
           <Text style={styles.textFormat}>RICARDO</Text>
         </Pressable>
@@ -26,8 +45,7 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   title: {
-    color: 'white',
-    backgroundColor: "#039E75",
+    color: "white",
     textAlign: "center",
     fontWeight: "bold",
     textAlignVertical: "center",
@@ -35,7 +53,6 @@ const styles = StyleSheet.create({
   },
   tabGroup: {
     flexDirection: "row",
-    backgroundColor: "#027859",
     justifyContent: "space-around",
     alignItems: "center",
     height: "50%",
