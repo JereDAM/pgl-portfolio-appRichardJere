@@ -5,14 +5,14 @@ const JereInfoData = () => {
   return (
     <View>
       <View>
-        <Text style={styles.likedInfo}>Tu mama</Text>
-        <Text style={styles.likedInfo}>Tu mama</Text>
-        <Text style={styles.likedInfo}>Tu mama</Text>
-        <Text style={styles.likedInfo}>Tu mama</Text>
-        <Text style={styles.likedInfo}>Tu mama</Text>
-        <Text style={styles.likedInfo}>Tu mama</Text>
-        <Text style={styles.likedInfo}>Tu mama</Text>
-        <Text style={styles.likedInfo}>Tu mama</Text>
+        <Text style={styles.likedInfo}>Los videojuegos</Text>
+        <Text style={styles.likedInfo}>Frontend</Text>
+        <Text style={styles.likedInfo}>Las XenoSeries</Text>
+        <Text style={styles.likedInfo}>El piano</Text>
+        <Text style={styles.likedInfo}>Salir con mis amigos</Text>
+        <Text style={styles.likedInfo}>El anime</Text>
+        <Text style={styles.likedInfo}>El tennis</Text>
+        <Text style={styles.likedInfo}>Los juegos de cartas</Text>
 
       </View>
     </View>

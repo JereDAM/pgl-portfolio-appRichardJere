@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, ScrollView } from "react-native";
+import { StyleSheet, Text, View, ScrollView, Modal, Alert } from "react-native";
 import React, { useState } from "react";
 import JereInfoData from "../data/JereInfoData";
 import Ionicons from '@expo/vector-icons/Ionicons';
@@ -6,10 +6,11 @@ import QRData from "../data/QRData";
 
 const JereInfoList = () => {
   
-  const [isCheckIcon, setisCheckIcon] = React.useState(true)
+  const [isCheckIcon, setIsCheckIcon] = React.useState(true)
+  const [modalVisible, setModalVisible] = useState(false);
 
   const onClickIcon = () => {
-    setisCheckIcon(false)
+    setIsCheckIcon(false)
   }
   return (
     <View style={styles.prueba}>
@@ -18,9 +19,17 @@ const JereInfoList = () => {
         <JereInfoData/>
       </ScrollView>
       <View style={styles.icons}>
-      {isCheckIcon ? (
-        <Ionicons name="logo-github" size={80} onPress={onClickIcon}></Ionicons>
-      ) : <QRData setisCheckIcon={setisCheckIcon}/>}
+        <Modal
+          animationType="slide"
+          transparent={true}
+          visible={modalVisible}
+          onRequestClose={() => {
+            Alert.alert('Modal has been closed.');
+            setModalVisible(!modalVisible);
+        }}>
+          <QRData setModalVisible={setModalVisible}></QRData>
+        </Modal>
+        <Ionicons name="logo-github" size={80} onPress={() => setModalVisible(true)}></Ionicons>
       </View>
     </View>
   );

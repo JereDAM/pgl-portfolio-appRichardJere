@@ -4,15 +4,15 @@ import QRCode from "react-native-qrcode-svg";
 import Ionicons from '@expo/vector-icons/Ionicons';
 
 
-const QRData = (props :{setIsCheckIcon : Function}) => {
+const QRData = (props :{setModalVisible : Function}) => {
 
-  const {setIsCheckIcon} = props
+  const {setModalVisible} = props
 
   return (
     <View style={styles.bodyStyles}>
       <View style={styles.centerQRCode}>
         <QRCode value="https://github.com/JereDAM/pgl-portfolio-appRichardJere.git"/>
-        <Ionicons name="arrow-back-outline" size={50} onPress={() => setIsCheckIcon(true)}/>
+        <Ionicons name="arrow-back-outline" size={50} onPress={() => setModalVisible(false)}/>
       </View>
     </View>
   );
@@ -31,5 +31,6 @@ const styles = StyleSheet.create({
     width: "100%",
     height: "100%",
     alignItems: "center",
+    backgroundColor: "#2CC2B4"
   },
 });
