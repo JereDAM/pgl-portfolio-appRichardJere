@@ -9,17 +9,20 @@ const JereInfoData = (props: {
   const infoDataBackgroundColor = isCheckIcon
     ? appColors.infoDataColor
     : "#3b3b3b";
+    const infoDataBorderColor = isCheckIcon
+    ? "#00FFE5"
+    : "white";
   return (
     <View>
       <View>
-        <Text style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor }]}>Los videojuegos</Text>
-        <Text style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor }]}>Frontend</Text>
-        <Text style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor }]}>XenoSeries</Text>
-        <Text style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor }]}>El piano</Text>
-        <Text style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor }]}>Salir con mis amigos</Text>
-        <Text style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor }]}>El anime</Text>
-        <Text style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor }]}>El tennis</Text>
-        <Text style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor }]}>Los juegos de cartas</Text>
+        <Text style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor , borderColor : infoDataBorderColor}]}>Los videojuegos</Text>
+        <Text style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor , borderColor : infoDataBorderColor}]}>Frontend</Text>
+        <Text style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor , borderColor : infoDataBorderColor}]}>XenoSeries</Text>
+        <Text style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor , borderColor : infoDataBorderColor}]}>El piano</Text>
+        <Text style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor , borderColor : infoDataBorderColor}]}>Salir con mis amigos</Text>
+        <Text style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor , borderColor : infoDataBorderColor}]}>El anime</Text>
+        <Text style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor , borderColor : infoDataBorderColor}]}>El tennis</Text>
+        <Text style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor , borderColor : infoDataBorderColor}]}>Los juegos de cartas</Text>
       </View>
     </View>
   );
@@ -29,7 +32,6 @@ export default JereInfoData;
 
 const styles = StyleSheet.create({
   likedInfo: {
-    borderColor: "#00FFE5",
     borderWidth: 1,
     borderStyle: "solid",
     borderRadius: 5,

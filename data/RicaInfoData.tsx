@@ -9,65 +9,68 @@ const RicaInfoData = (props: {
   const infoDataBackgroundColor = isCheckIcon
     ? appColors.infoDataColor
     : "#3b3b3b";
+    const infoDataBorderColor = isCheckIcon
+    ? "#00FFE5"
+    : "white";
   return (
     <View>
       <Text
-        style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor }]}
+        style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor, borderColor : infoDataBorderColor }]}
       >
         La Proteína
       </Text>
       <Text
-        style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor }]}
+        style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor, borderColor : infoDataBorderColor }]}
       >
         Las Mancuernas
       </Text>
       <Text
-        style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor }]}
+        style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor, borderColor : infoDataBorderColor }]}
       >
         Las Barras
       </Text>
       <Text
-        style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor }]}
+        style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor, borderColor : infoDataBorderColor }]}
       >
         La Banca
       </Text>
       <Text
-        style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor }]}
+        style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor, borderColor : infoDataBorderColor }]}
       >
         Hacer Pecho
       </Text>
       <Text
-        style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor }]}
+        style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor, borderColor : infoDataBorderColor }]}
       >
         One Piece
       </Text>
       <Text
-        style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor }]}
+        style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor, borderColor : infoDataBorderColor }]}
       >
         La Proteína
       </Text>
       <Text
-        style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor }]}
+        style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor, borderColor : infoDataBorderColor }]}
       >
         El anime
       </Text>
       <Text
-        style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor }]}
+        style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor, borderColor : infoDataBorderColor }]}
       >
         BERSERK
       </Text>
       <Text
-        style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor }]}
+        style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor, borderColor : infoDataBorderColor }]}
       >
         La Proteína
       </Text>
       <Text
-        style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor }]}
+        style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor, borderColor : infoDataBorderColor }]}
       >
         La hipertrofia muscular
       </Text>
       <Text
-        style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor }]}
+        style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor, borderColor : infoDataBorderColor }]}
       >
         La Proteína Gorda
       </Text>
@@ -82,7 +85,6 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   likedInfo: {
-    borderColor: "#00FFE5",
     borderWidth: 1,
     borderStyle: "solid",
     borderRadius: 5,
