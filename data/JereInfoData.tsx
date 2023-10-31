@@ -1,18 +1,25 @@
-import { StyleSheet, Text, ScrollView, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import React from "react";
+import appColors from "../assets/styles/appColors";
 
-const JereInfoData = () => {
+const JereInfoData = (props: {
+  isCheckIcon: boolean;
+}) => {
+  const { isCheckIcon } = props;
+  const infoDataBackgroundColor = isCheckIcon
+    ? appColors.infoDataColor
+    : "#3b3b3b";
   return (
     <View>
       <View>
-        <Text style={styles.likedInfo}>Los videojuegos</Text>
-        <Text style={styles.likedInfo}>Frontend</Text>
-        <Text style={styles.likedInfo}>XenoSeries</Text>
-        <Text style={styles.likedInfo}>El piano</Text>
-        <Text style={styles.likedInfo}>Salir con mis amigos</Text>
-        <Text style={styles.likedInfo}>El anime</Text>
-        <Text style={styles.likedInfo}>El tennis</Text>
-        <Text style={styles.likedInfo}>Los juegos de cartas</Text>
+        <Text style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor }]}>Los videojuegos</Text>
+        <Text style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor }]}>Frontend</Text>
+        <Text style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor }]}>XenoSeries</Text>
+        <Text style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor }]}>El piano</Text>
+        <Text style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor }]}>Salir con mis amigos</Text>
+        <Text style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor }]}>El anime</Text>
+        <Text style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor }]}>El tennis</Text>
+        <Text style={[styles.likedInfo, { backgroundColor: infoDataBackgroundColor }]}>Los juegos de cartas</Text>
       </View>
     </View>
   );
@@ -31,7 +38,6 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontStyle: "italic",
     fontSize: 16,
-    backgroundColor: "#34A39A",
     color: "white",
   },
 });
