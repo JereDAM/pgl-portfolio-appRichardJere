@@ -40,7 +40,8 @@ const Body = (props: {
               imageBackground={cardDataId2.imageBackground}
             />
           ) : null}
-          <JereInfoList />
+          <JereInfoList 
+            isCheckIcon={isCheckIcon}/>
         </View>
       )}
     </View>
