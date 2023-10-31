@@ -14,16 +14,21 @@ const QRData = (props: {
     <View style={styles.bodyStyles}>
       <View
         style={[
-          styles.centerQRCode,
+          styles.QRCode,
           { backgroundColor: QrDataBackgroundColor },
         ]}
       >
-        <QRCode value="https://github.com/JereDAM/pgl-portfolio-appRichardJere.git" />
         <Ionicons
           name="arrow-back-outline"
-          size={50}
+          size={70}
           onPress={() => setModalVisible(false)}
+          style ={
+            styles.arrowPosition
+          }
         />
+      <View style={styles.CenterQRCode}>
+        <QRCode value="https://github.com/JereDAM/pgl-portfolio-appRichardJere.git"/>
+      </View>
       </View>
     </View>
   );
@@ -34,13 +39,20 @@ export default QRData;
 const styles = StyleSheet.create({
   bodyStyles: {
     width: "100%",
-    justifyContent: "space-between",
     height: "100%",
   },
-  centerQRCode: {
+  QRCode: {
     justifyContent: "center",
     width: "100%",
     height: "100%",
-    alignItems: "center",
   },
+  arrowPosition: {
+    flex: 1
+  },
+  CenterQRCode: {
+    flex: 2,
+    marginLeft: '40%',
+    marginTop: '30%'
+
+  }
 });
