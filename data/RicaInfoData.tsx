@@ -1,4 +1,4 @@
-import { StyleSheet, Text, ScrollView, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import appColors from "../assets/styles/appColors";
 
