@@ -3,19 +3,23 @@ import React, { useState } from "react";
 import JereInfoData from "../data/JereInfoData";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import QRData from "../data/QRData";
+import appColors from "../assets/styles/appColors";
 
-const JereInfoList = () => {
-  const [isCheckIcon, setIsCheckIcon] = React.useState(true);
+const JereInfoList = (props: {
+  isCheckIcon: boolean;
+}) => {
   const [modalVisible, setModalVisible] = useState(false);
+  const { isCheckIcon } = props;
+  const infoListBackgroundColor = isCheckIcon ? appColors.principal : "black";
+  const textColor = isCheckIcon ? "black" : "white";
+  ;
 
-  const onClickIcon = () => {
-    setIsCheckIcon(false);
-  };
   return (
-    <View style={styles.prueba}>
-      <Text style={styles.infoTitle}>Cosas que amo :</Text>
+    <View style={[styles.principalContainer , {backgroundColor: infoListBackgroundColor}]}>
+      <Text style={[styles.infoTitle, { color: textColor }]}>Cosas que amo :</Text>
       <ScrollView style={styles.scrollStyle}>
-        <JereInfoData />
+        <JereInfoData  
+        isCheckIcon={isCheckIcon}/>
       </ScrollView>
       <View style={styles.icons}>
         <Modal
@@ -27,10 +31,12 @@ const JereInfoList = () => {
             setModalVisible(!modalVisible);
           }}
         >
-          <QRData setModalVisible={setModalVisible}></QRData>
+          <QRData setModalVisible={setModalVisible}
+          isCheckIcon={isCheckIcon} />
         </Modal>
         <Ionicons
           name="logo-github"
+          color={textColor}
           size={80}
           onPress={() => setModalVisible(true)}
         ></Ionicons>
@@ -41,7 +47,7 @@ const JereInfoList = () => {
 export default JereInfoList;
 
 const styles = StyleSheet.create({
-  prueba: {
+  principalContainer: {
     flex: 1,
     marginBottom: -100,
     width: 400,
